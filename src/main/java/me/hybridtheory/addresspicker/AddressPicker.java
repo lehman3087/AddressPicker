@@ -79,6 +79,7 @@ public class AddressPicker extends LinearLayout {
         mAdapter = adapter;
 
         String[] displayedValues = mAdapter.getProvinceNames();
+        mProvincePicker.setDisplayedValues(null);
         mProvincePicker.setMinValue(0);
         mProvincePicker.setMaxValue(displayedValues.length - 1);
         mProvincePicker.setDisplayedValues(displayedValues);
@@ -113,6 +114,7 @@ public class AddressPicker extends LinearLayout {
         public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
             int province = getSelectedProvince();
             String[] displayedValues = mAdapter.getCityNames(province);
+            mCityPicker.setDisplayedValues(null);
             mCityPicker.setMinValue(0);
             mCityPicker.setMaxValue(displayedValues.length - 1);
             mCityPicker.setDisplayedValues(displayedValues);
@@ -130,6 +132,7 @@ public class AddressPicker extends LinearLayout {
             int province = getSelectedProvince();
             int city = getSelectedCity();
             String[] displayedValues = mAdapter.getCountyNames(province, city);
+            mCountyPicker.setDisplayedValues(null);
             mCountyPicker.setMinValue(0);
             mCountyPicker.setMaxValue(displayedValues.length - 1);
             mCountyPicker.setDisplayedValues(displayedValues);
