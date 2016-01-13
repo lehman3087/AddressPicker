@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AddressPicker</string>
+    <string name="app_name">My Picker</string>
+    <string name="action_settings">Settings</string>
 </resources>
